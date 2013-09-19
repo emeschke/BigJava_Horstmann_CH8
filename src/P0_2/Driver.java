@@ -1,9 +1,5 @@
 package P0_2;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.util.Scanner;
-
 /**
  Name your packages according to its Programming Exercise identifier, except replace the period with underscore.
  For example, if the Programming Exercise identifier is P1.15, then name your package file P1_15
@@ -24,9 +20,43 @@ public class Driver {
         //victor exclaims victory
 
 
+        Boxer boxApollo = new Boxer("Apollo", 4, 0.75);
+        Boxer boxRocky = new Boxer("Rocky", 3, 0.85);
 
+        Boxer boxPuncher = boxRocky; //Stalone draws first blood (no pun intended)
+        Boxer boxPunchee = boxApollo;
+        Boxer boxTemp;  //used for swapping
+
+        int nC = 1;
+        while(true){
+
+            //swing
+            System.out.println(nC++ + " " + boxPuncher.getName() + " swings. " + boxPunchee.getName() + healthMeter(boxPunchee));
+            boxPuncher.swing(boxPunchee);
+
+            if (boxPunchee.isKO()){
+                //victor exclaims victory
+                System.out.println(boxPuncher.meWin());
+                break;
+            }
+            //swap
+            boxTemp = boxPuncher;
+            boxPuncher = boxPunchee;
+            boxPunchee = boxTemp;
+
+        }
 
     }
+
+    private static String healthMeter(Boxer boxBoxer){
+
+        String strR = " > ";
+        for (int nC = 0; nC <boxBoxer.getHitPoints() ; nC++) {
+              strR += "#";
+        }
+        return strR;
+    }
+
 
 
 }
