@@ -21,7 +21,7 @@ R8.20 Zero, null, false, empty String
 &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
 
 Programming Exercises: Name your packages according to the Programming Exercise identifier, except
-replace the period with underscore. You will want a Driver class (with a static main() method) to start your program.
+replace the period with underscore. You will want a Driver class (with a static main() method) to drive your program.
 See package P0_2 for an example.
 
 7 points each

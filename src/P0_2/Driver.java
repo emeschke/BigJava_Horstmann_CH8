@@ -31,8 +31,8 @@ public class Driver {
         while(true){
 
             //swing
-            System.out.println(nC++ + " " + boxPuncher.getName() + " swings. " + boxPunchee.getName() + healthMeter(boxPunchee));
             boxPuncher.swing(boxPunchee);
+            System.out.println(nC++ + " " + boxPuncher.getName() + " swings. " + boxPunchee.getName() + healthMeter(boxPunchee));
 
             if (boxPunchee.isKO()){
                 //victor exclaims victory
