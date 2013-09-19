@@ -18,11 +18,43 @@ public class Boxer {
     private String mName;  //fighters name
 
 
+    public Boxer(String name, int strength, double accuracy) {
+        mName = name;
+        mStrength = strength;
+        mAccuracy = accuracy;
+    }
 
+    public String getName() {
+        return mName;
+    }
 
+    public void setName(String name) {
+        mName = name;
+    }
 
+    public int getHitPoints() {
+        return mHitPoints;
+    }
 
+    public void setHitPoints(int hitPoints) {
+        mHitPoints = hitPoints;
+    }
 
+    public int getStrength() {
+        return mStrength;
+    }
 
+    public void setStrength(int strength) {
+        mStrength = strength;
+    }
 
+    public double getAccuracy() {
+        return mAccuracy;
+    }
+
+    public void setAccuracy(double accuracy) {
+        mAccuracy = accuracy;
+    }
 }
+
+
