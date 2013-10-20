@@ -1,0 +1,10 @@
+The difference between the approach to 8.14 and the approach to 8.15 focuses on the object-oriented idea in programming.
+The goal of both problems is to find the surface area and volume of different 3d figures.  8.14 approaches it in a
+static way, looking at the volume and surface area as parameters to be found.  8.15, on the other hand, looks at
+volume/surface area as properties of each certain geometric shape.
+
+Which approach is most effective depends on what the programmer is trying to accomplish.  8.14 is similar to the math
+library, which is useful because it declares many static methods that can be used in a one-off way without
+instantiating objects.  If the programmer wishes to use the 3d objects as building blocks to other arrays or methods
+it makes much more sense to follow the structure of 8.15.  It is much easier to create and manipulate many different
+objects when they are each created separately and have their own properties.

@@ -1,5 +1,7 @@
 package P8_8;
 
+import java.util.ArrayList;
+
 /**
  * Created with IntelliJ IDEA.
  * User: E
@@ -8,25 +10,36 @@ package P8_8;
  * To change this template use File | Settings | File Templates.
  */
 public class Student {
-    String name;
-    int totalScore;
-    int quizCount;
+    private String mName;
+    private ArrayList<Grade> mGrades = new ArrayList<Grade>();
+    private int countGrades = 0;
 
-    //Constructor that constructs an object with the student's name and a zero score.
+    //Constructor with the student's name.
     public Student(String name){
-        this.name = name;
+        mName = name;
     }
 
-    public String getName(){
-        return name;
+    //Get GPA.  Iterate through the list and use the Grade class to look up the GPA associated with each grade.
+    public double getGpa(){
+        int counter = 0;
+        double totalGpa = 0;
+        for (int i = 0; i < mGrades.size(); i++) {
+            totalGpa += mGrades.get(i).getNumeric();
+            counter += 1;
+        }
+        return totalGpa/counter;
     }
 
-    public void addQuiz(int score){
-        totalScore += score;
-        quizCount += 1;
+    //Add grades to the mGrades arrayList
+    public void addGrade(Grade grd){
+        mGrades.add(grd);
+        countGrades += 1;
     }
 
-    public double getAverageScore(){
-        return 1.0*totalScore/quizCount;
+    //Get name
+    public String getmName(){
+        return mName;
     }
+
+
 }

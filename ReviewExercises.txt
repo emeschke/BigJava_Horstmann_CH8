@@ -2,6 +2,50 @@
 # Use this file to answer Review Exercises from the Big Java textbook
 #########################################################################
 
+R8.1--Encapsulation is the process of providing a public interface while hiding the implementation details.  It is
+useful because it allows the original programmer of a class to determine very specifically how the user should
+interact with the class.  For the user of a class it is powerful because there can be a lot that happens behind the
+scenes that he can use without understanding how it works (as long as he trusts it.)
+
+R8.4--The public interface of a class is the set of methods provided by a class together with a description of their
+behavior.  The implementation is the behind-the-scenes way the that the class handles the details of making the
+public interface work as promised.  A key difference between the two is the user sees the public implementation
+but the implementation is hidden.
+
+R8.7--A static method belongs to a class, while an instance method belongs to an object created by the class.  That
+means that a static method can be called without creating an object of the class type.  Conversely, an object of the
+given class must be created to use its instance method.
+
+R8.8--Mutator methods and accessor methods are the types of instance methods that exist within the public interface.
+Mutator methods change (mutate) the values of the private variables within a class, while accessor methods don't
+change those values, they just read them.
+
+R8.9--An explicit parameter is one that the user must provide to an instance method.  The object which contains the
+instance method is the implicit parameter.  Another way to think of it is the explicit parameters are the inputs to
+a method, while the implicit parameter is the object that "owns" the method.
+
+R8.10--An instance method can have one implicit parameter and it can have 0 to any number of explicit parameters.  A
+static method has no implicit parameter because it is called from the class rather than the instance object.
+
+R8.12--A class can have zero to any number of constructors, the only constraint being that they each must have a
+different set of parameters.  If the class has no constructor specified, a generic constructor is used to initialize it.
+The constructor that is used is the one that matches the types and number of the explicit parameters that are passed
+to it.
+
+R8.16--The point of declaring instance variables is not that they are a secret from everyone, just that they are
+outside the scope of someone who is using the class in programming.  It means that the main method that is invoking
+the class can't see and modify the private variables except through the public interface.  The programmer can still
+examine and modify the class declaration, but not while he is using the class.
+
+R8.19--The "this" refers to the implicit parameter that is being modified by an instance method.  Although it is not
+necessary to use it in the class definition, it can be helpful because it clarifies that the parameter is an instance
+variable (this.example) rather than an explicit parameter that is passed to the instance method.
+
+R8.20--The zero value is a value that is stored by an int or a double.  It is a numerical value that can be used in
+arithmetic operations.  The null value points to an object in memory that is not yet initialized; it cannot retrieve
+anything because it doesn't yet store a memory location for an object.  The value false is a boolean value of false,
+which is the opposite of true.  The empty string is an object, a string of length 0.  The difference between the four
+things is the set of operations in which each can be used.
 
 
 
