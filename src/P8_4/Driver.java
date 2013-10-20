@@ -15,7 +15,9 @@ public class Driver {
 
         //Call methods to print the addresses
         firstAddress.printAddress();
+        System.out.println();
         secondAddress.printAddress();
+        System.out.println();
 
         //Compare and print the comparison of the two addresses.
         System.out.println("First address comes before second address: " + firstAddress.comesBefore(secondAddress));

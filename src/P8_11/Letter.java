@@ -24,6 +24,7 @@ public class Letter {
         this.receiver = to;
     }
 
+    //Add line to the letter.
     public void addLine(String line){
         letterBodys.add(line);
     }

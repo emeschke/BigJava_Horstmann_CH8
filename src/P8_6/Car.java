@@ -24,10 +24,12 @@ public class Car {
         fuelLevel = Math.max(0 , fuelLevel - miles/fuelEff);
     }
 
+    //Add gas to the fuel level.
     public void addGas(float gasToAdd){
         fuelLevel += gasToAdd;
     }
 
+    //Get gas level.
     public double getGasLevel(){
         return fuelLevel;
     }
